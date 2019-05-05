@@ -36,7 +36,7 @@ function buildTypedUrlList(divName) {
           url: url
         }, processVisitsWithUrl(url));
         numRequestsOutstanding++;
-      }
+      };
       if (!numRequestsOutstanding) {
         onAllVisitsProcessed();
       }

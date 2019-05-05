@@ -1,12 +1,12 @@
-function buildPopupDom(list_entry) {
-  var popupDiv = document.getElementById('topsite');
-  var ol = popupDiv.appendChild(document.createElement('ol'));
-  ol.start = 0;
-  for (var i = 0; i < list_entry.length; i++) {
-    var li = ol.appendChild(document.createElement('li'));
-    var a = li.appendChild(document.createElement('a'));
-    a.href = list_entry[i].url;
-    a.appendChild(document.createTextNode(list_entry[i].title));
+function list(list_entry) {
+  var location = document.getElementById('topsite');
+  var list_main = location.appendChild(document.createElement('ol'));
+  list_main.start = 0;
+  for (var index_number = 0; index_number < list_entry.length; index_number++) {
+    var list_item = list_main.appendChild(document.createElement('li'));
+    var list_link = list_item.appendChild(document.createElement('a'));
+    list_link.href = list_entry[index_number].url;
+    list_link.appendChild(document.createTextNode(list_entry[index_number].title));
   }
 }
-chrome.topSites.get(buildPopupDom);
+chrome.topSites.get(list);

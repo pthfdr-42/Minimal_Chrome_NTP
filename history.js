@@ -1,7 +1,3 @@
-function onAnchorClick(event) {
-  return false;
-}
-
 function buildPopupDom(divName, data) {
   var popupDiv = document.getElementById(divName);
   var ol = document.createElement('ol');
@@ -12,7 +8,6 @@ function buildPopupDom(divName, data) {
     var a = document.createElement('a');
     a.href = data[i];
     a.appendChild(document.createTextNode(data[i]));
-    a.addEventListener('click', onAnchorClick);
     var li = document.createElement('li');
     li.appendChild(a);
     ol.appendChild(li);

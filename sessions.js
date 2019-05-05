@@ -1,6 +1,3 @@
-function onAnchorClick(event) {
-  return false;
-}
 function buildPopupDom(list_entry) {
   var popupDiv = document.getElementById('sessions');
   var ol = popupDiv.appendChild(document.createElement('ol'));
@@ -10,7 +7,6 @@ function buildPopupDom(list_entry) {
     var a = li.appendChild(document.createElement('a'));
     a.href = list_entry[i].url;
     a.appendChild(document.createTextNode(list_entry[i].title));
-    a.addEventListener('click', onAnchorClick);
   }
 }
 chrome.sessions.getRecentlyClosed(buildPopupDom);

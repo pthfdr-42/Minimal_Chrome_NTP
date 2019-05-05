@@ -2,7 +2,7 @@ function onAnchorClick(event) {
   return false;
 }
 function buildPopupDom(list_entry) {
-  var popupDiv = document.getElementById('topsite');
+  var popupDiv = document.getElementById('sessions');
   var ol = popupDiv.appendChild(document.createElement('ol'));
   ol.start = 0;
   for (var i = 0; i < list_entry.length; i++) {
@@ -13,4 +13,4 @@ function buildPopupDom(list_entry) {
     a.addEventListener('click', onAnchorClick);
   }
 }
-chrome.topSites.get(buildPopupDom);
+chrome.sessions.getRecentlyClosed(buildPopupDom);

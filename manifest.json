@@ -5,6 +5,6 @@
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "permissions": ["topSites", "history"],
+  "permissions": ["topSites", "history", "sessions"],
   "manifest_version": 2
 }

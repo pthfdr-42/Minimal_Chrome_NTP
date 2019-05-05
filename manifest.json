@@ -1,0 +1,10 @@
+{
+  "name": "Personal test new tab page",
+  "description": "New tab page with ordered lists.",
+  "version": "1",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["topSites", "history"],
+  "manifest_version": 2
+}
